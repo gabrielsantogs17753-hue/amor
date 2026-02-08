@@ -1,0 +1,1507 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Carmem Vitória 💕</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="hearts-background"></div>
+
+    <!-- Página Principal -->
+    <div class="container" id="mainPage">
+      <header class="header">
+        <h1 class="title">Carmem Vitória Freitas Borges</h1>
+        <p class="subtitle">Meu amor, minha vida, meu tudo 💖</p>
+      </header>
+
+      <div class="main-heart" id="mainHeart">
+        <svg viewBox="0 0 100 100" class="heart-svg">
+          <path
+            d="M50,90 C50,90 10,60 10,35 C10,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 90,25 90,35 C90,60 50,90 50,90 Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span class="heart-text">Clique aqui ❤️</span>
+      </div>
+
+      <div class="message-box" id="messageBox">
+        <p id="messageText"></p>
+        <button class="close-btn" id="closeBtn">✕</button>
+      </div>
+
+      <div class="hearts-grid">
+        <div class="heart-button" data-message="0">
+          <svg viewBox="0 0 100 100" class="heart-icon">
+            <path
+              d="M50,90 C50,90 10,60 10,35 C10,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 90,25 90,35 C90,60 50,90 50,90 Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <div class="heart-button" data-message="1">
+          <svg viewBox="0 0 100 100" class="heart-icon">
+            <path
+              d="M50,90 C50,90 10,60 10,35 C10,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 90,25 90,35 C90,60 50,90 50,90 Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <div class="heart-button jellyfish-heart" id="jellyfishHeart">
+          <svg viewBox="0 0 100 100" class="heart-icon">
+            <path
+              d="M50,90 C50,90 10,60 10,35 C10,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 90,25 90,35 C90,60 50,90 50,90 Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span class="jellyfish-emoji">🪼</span>
+        </div>
+        <div class="heart-button" data-message="2">
+          <svg viewBox="0 0 100 100" class="heart-icon">
+            <path
+              d="M50,90 C50,90 10,60 10,35 C10,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 90,25 90,35 C90,60 50,90 50,90 Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <div class="heart-button insect-heart" id="insectHeart">
+          <svg viewBox="0 0 100 100" class="heart-icon">
+            <path
+              d="M50,90 C50,90 10,60 10,35 C10,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 90,25 90,35 C90,60 50,90 50,90 Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span class="insect-emoji">🦋</span>
+        </div>
+        <div class="heart-button" data-message="3">
+          <svg viewBox="0 0 100 100" class="heart-icon">
+            <path
+              d="M50,90 C50,90 10,60 10,35 C10,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 90,25 90,35 C90,60 50,90 50,90 Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Botão Flutuante de Galerias -->
+      <div class="floating-gallery-btn" id="galleryBtn">
+        <svg viewBox="0 0 100 100" class="gallery-heart-icon">
+          <path
+            d="M50,90 C50,90 10,60 10,35 C10,25 15,15 25,15 C35,15 45,25 50,35 C55,25 65,15 75,15 C85,15 90,25 90,35 C90,60 50,90 50,90 Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span class="gallery-text">🖼️</span>
+      </div>
+
+      <!-- Menu de Galerias -->
+      <div class="gallery-menu" id="galleryMenu">
+        <button class="close-gallery-menu" id="closeGalleryMenu">✕</button>
+        <h2>Escolha uma Galeria 💕</h2>
+        <div class="gallery-options">
+          <button class="gallery-option-btn" id="openJellyGallery">
+            <span class="gallery-option-icon">🪼</span>
+            <span class="gallery-option-text">Galeria de Águas-Vivas</span>
+          </button>
+          <button class="gallery-option-btn" id="openInsectGallery">
+            <span class="gallery-option-icon">🦋</span>
+            <span class="gallery-option-text">Galeria de Insetos</span>
+          </button>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>Feito por Gabriel D.S com todo amor do mundo para você 💕</p>
+      </footer>
+    </div>
+
+    <!-- Página das Águas-Vivas -->
+    <div class="special-page jellyfish-page" id="jellyfishPage">
+      <button class="back-btn" id="backBtnJelly">← Voltar</button>
+
+      <div class="special-container">
+        <header class="special-header">
+          <h1 class="special-title jellyfish-title">
+            🪼 O Mundo Mágico das Águas-Vivas 🪼
+          </h1>
+          <p class="special-subtitle">
+            Criaturas tão fascinantes quanto você é especial para mim 💕
+          </p>
+        </header>
+
+        <div class="special-content">
+          <section class="special-section">
+            <h2>✨ O Que São Águas-Vivas?</h2>
+            <p>
+              As águas-vivas (ou medusas) são criaturas marinhas incríveis que
+              existem há mais de 500 milhões de anos! Elas são compostas por 95%
+              de água e pertencem ao filo Cnidaria. Não possuem cérebro,
+              coração, ossos ou sangue, mas são sobreviventes extraordinárias
+              dos oceanos. Seu nome científico varia conforme a espécie, mas
+              todas compartilham características únicas que as tornam
+              verdadeiras maravilhas da natureza.
+            </p>
+            <p>
+              As águas-vivas são encontradas em todos os oceanos do mundo, desde
+              as águas rasas costeiras até as profundezas abissais. Algumas
+              espécies chegam a viver a mais de 10.000 metros de profundidade!
+              Elas têm corpos gelatinosos e transparentes que as tornam
+              praticamente invisíveis na água, uma adaptação perfeita para
+              sobrevivência e caça.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🌊 Anatomia Fascinante</h2>
+            <p>
+              <strong>Corpo em forma de sino (umbrela):</strong> A parte
+              superior arredondada é chamada de umbrela ou sino, responsável
+              pela propulsão. Quando contraem e relaxam essa estrutura, elas se
+              movem pela água em movimentos rítmicos e hipnotizantes.
+            </p>
+            <p>
+              <strong>Tentáculos venenosos:</strong> Possuem células urticantes
+              especializadas chamadas cnidócitos ou nematocistos que liberam
+              toxinas microscópicas para capturar presas e se defender. Cada
+              tentáculo pode conter milhares dessas células!
+            </p>
+            <p>
+              <strong>Mesogleia:</strong> A camada gelatinosa que compõe a maior
+              parte do corpo, dando-lhes a consistência característica. É
+              composta principalmente de água e proteínas estruturais.
+            </p>
+            <p>
+              <strong>Boca e estômago (cavidade gastrovascular):</strong>
+              Localizam-se na parte inferior, no centro dos tentáculos. A mesma
+              abertura serve para ingestão de alimentos e eliminação de
+              resíduos.
+            </p>
+            <p>
+              <strong>Sistema nervoso primitivo (rede nervosa):</strong> Mesmo
+              sem cérebro centralizado, possuem uma rede de nervos espalhada
+              pelo corpo que detecta luz, cheiro, toque e respondem a estímulos
+              ambientais.
+            </p>
+            <p>
+              <strong>Estatocistos:</strong> Órgãos sensoriais que funcionam
+              como bússolas, ajudando-as a detectar gravidade e orientação na
+              água.
+            </p>
+            <p>
+              <strong>Bioluminescência:</strong> Muitas espécies possuem
+              proteínas especiais como a aequorina e GFP (proteína verde
+              fluorescente) que emitem luz própria através de reações químicas,
+              criando um espetáculo mágico nos oceanos escuros!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>💖 Curiosidades Apaixonantes</h2>
+            <p>
+              🪼 <strong>Imortalidade biológica:</strong> A espécie Turritopsis
+              dohrnii pode reverter seu ciclo de vida completamente, voltando ao
+              estágio de pólipo jovem e recomeçando tudo novamente! É
+              literalmente imortal, a menos que seja comida ou morra por doença.
+            </p>
+            <p>
+              🪼 <strong>Viajantes dos oceanos:</strong> Algumas espécies podem
+              nadar ativamente usando contrações rítmicas, mas a maioria se
+              deixa levar pelas correntes marítimas, podendo viajar milhares de
+              quilômetros.
+            </p>
+            <p>
+              🪼 <strong>Visão sem olhos:</strong> Embora não tenham olhos
+              verdadeiros, possuem órgãos sensíveis à luz chamados ocelos e
+              ropálios que detectam claridade, sombras e até cores em algumas
+              espécies!
+            </p>
+            <p>
+              🪼 <strong>Tamanho impressionante:</strong> A maior espécie
+              conhecida, a água-viva-juba-de-leão (Cyanea capillata), pode ter
+              tentáculos de até 37 metros de comprimento - mais longa que uma
+              baleia azul!
+            </p>
+            <p>
+              🪼 <strong>A menor:</strong> Algumas espécies da classe Cubozoa
+              medem menos de 1 centímetro de diâmetro quando adultas.
+            </p>
+            <p>
+              🪼 <strong>Dieta carnívora variada:</strong> Alimentam-se
+              principalmente de plâncton, pequenos peixes, crustáceos, larvas,
+              ovos de peixe e até outras águas-vivas menores. Algumas espécies
+              são canibais!
+            </p>
+            <p>
+              🪼 <strong>Defesa química potente:</strong> O veneno pode variar
+              de leve irritação a potencialmente fatal para humanos. A
+              água-viva-caixa australiana tem veneno suficiente para matar 60
+              pessoas adultas!
+            </p>
+            <p>
+              🪼 <strong>Respiração pela pele:</strong> Não possuem pulmões ou
+              brânquias - absorvem oxigênio diretamente pela superfície do corpo
+              através de difusão.
+            </p>
+            <p>
+              🪼 <strong>Sem sangue:</strong> Não precisam de sistema
+              circulatório porque seus corpos são tão finos que o oxigênio se
+              difunde facilmente.
+            </p>
+            <p>
+              🪼 <strong>Sobreviventes do tempo:</strong> Fósseis de águas-vivas
+              foram encontrados datando de mais de 500 milhões de anos -
+              existiam antes dos dinossauros, antes das árvores, antes de quase
+              tudo!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🌈 Espécies Mais Incríveis do Mundo</h2>
+            <p>
+              <strong>Água-viva-lua (Aurelia aurita):</strong> Translúcida e
+              delicada, uma das mais comuns nos oceanos. Possui quatro
+              estruturas em forma de ferradura visíveis (gônadas) e é
+              praticamente inofensiva aos humanos. Pode viver até 6 meses.
+            </p>
+            <p>
+              <strong>Caravela-portuguesa (Physalia physalis):</strong>
+              Tecnicamente não é uma água-viva, mas um sifonóforo (colônia de
+              organismos)! Tem tentáculos que podem chegar a 50 metros e veneno
+              extremamente potente que causa dor intensa.
+            </p>
+            <p>
+              <strong>Água-viva-caixa (Chironex fleckeri):</strong> Considerada
+              a mais mortal do mundo! Habita águas australianas, tem até 15
+              tentáculos por canto (60 no total) e pode nadar até 7 km/h. Seu
+              veneno ataca o coração, sistema nervoso e células da pele
+              simultaneamente.
+            </p>
+            <p>
+              <strong>Água-viva-cristal (Aequorea victoria):</strong>
+              Bioluminescente verde espetacular! A proteína GFP extraída dela
+              rendeu o Prêmio Nobel de Química em 2008 e revolucionou a biologia
+              molecular.
+            </p>
+            <p>
+              <strong>Água-viva-juba-de-leão (Cyanea capillata):</strong> A
+              maior água-viva do mundo! Vive em águas frias do Ártico e pode ter
+              sino de 2 metros de diâmetro. Sua coloração varia de vermelho
+              escuro a amarelo pálido.
+            </p>
+            <p>
+              <strong>Água-viva-imortal (Turritopsis dohrnii):</strong> Pequena
+              (4-5mm), mas com o superpoder da imortalidade biológica! Quando
+              estressada ou velha, reverte para pólipo e recomeça a vida.
+            </p>
+            <p>
+              <strong>Água-viva-rosa (Drymonema larsoni):</strong> Gigante rosa
+              descoberta recentemente, pode ter 1 metro de diâmetro! É predadora
+              de outras águas-vivas.
+            </p>
+            <p>
+              <strong>Água-viva-ovo-frito (Cotylorhiza tuberculata):</strong>
+              Parece literalmente um ovo frito flutuando! Comum no Mediterrâneo,
+              é inofensiva e linda.
+            </p>
+            <p>
+              <strong>Água-viva-de-barril (Rhizostoma pulmo):</strong> Grande
+              (até 90cm) e completamente inofensiva. Muito comum no Mediterrâneo
+              e Atlântico.
+            </p>
+            <p>
+              <strong>Água-viva-azul (Cyanea lamarckii):</strong> Azul vibrante
+              e absolutamente deslumbrante! Habita águas do Atlântico Norte.
+            </p>
+            <p>
+              <strong>Água-viva-joia (Atolla wyvillei):</strong> Águas
+              profundas, bioluminescente vermelha. Quando atacada, cria um "show
+              de luzes" para atrair predadores maiores que comam seu atacante!
+            </p>
+            <p>
+              <strong>Água-viva-pente (Ctenophora):</strong> Tecnicamente não é
+              cnidário, mas parece água-viva. Tem fileiras de cílios que
+              refratam luz criando arco-íris!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🔬 Importância Científica e Médica</h2>
+            <p>
+              <strong>Revolução na medicina:</strong> Proteínas fluorescentes
+              (GFP) extraídas de águas-vivas são usadas em pesquisas do câncer,
+              Alzheimer, desenvolvimento de órgãos e rastreamento celular.
+              Rendeu Prêmio Nobel!
+            </p>
+            <p>
+              <strong>Indicadores ambientais:</strong> Seu aumento populacional
+              indica mudanças na saúde dos oceanos, aquecimento global,
+              sobrepesca e poluição.
+            </p>
+            <p>
+              <strong>Estudos de longevidade:</strong> A Turritopsis dohrnii é
+              intensamente estudada para entender processos de envelhecimento e
+              potencial reversão em humanos.
+            </p>
+            <p>
+              <strong>Biotecnologia farmacêutica:</strong> Toxinas estão sendo
+              pesquisadas para criar medicamentos contra dor crônica, artrite,
+              câncer e doenças cardíacas.
+            </p>
+            <p>
+              <strong>Biomateriais:</strong> Colágeno de águas-vivas está sendo
+              estudado para criar curativos, implantes médicos e scaffolds para
+              engenharia de tecidos.
+            </p>
+            <p>
+              <strong>Neurociência:</strong> Seu sistema nervoso simples ajuda
+              cientistas a entender a evolução do cérebro e processamento neural
+              básico.
+            </p>
+            <p>
+              <strong>Estudos evolutivos:</strong> Como existem há 500+ milhões
+              de anos praticamente inalteradas, são "fósseis vivos" que revelam
+              segredos da evolução.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🌍 Habitat e Distribuição Global</h2>
+            <p>
+              As águas-vivas vivem literalmente em TODOS os oceanos do mundo!
+              Desde águas tropicais quentes do Caribe até as geladas águas
+              polares da Antártida e Ártico. Algumas espécies habitam
+              exclusivamente águas profundas abissais (até 10.000m), enquanto
+              outras preferem águas rasas costeiras e estuários.
+            </p>
+            <p>
+              <strong>Águas temperadas:</strong> Europa, costa leste e oeste dos
+              EUA, Japão - grande variedade de espécies.
+            </p>
+            <p>
+              <strong>Águas tropicais:</strong> Caribe, Sudeste Asiático, Grande
+              Barreira de Corais - espécies altamente venenosas como
+              cubozoários.
+            </p>
+            <p>
+              <strong>Águas frias:</strong> Ártico, Antártida, mares profundos -
+              espécies gigantes como juba-de-leão.
+            </p>
+            <p>
+              <strong>Água doce:</strong> Sim! Existem espécies de água doce
+              como Craspedacusta sowerbii encontrada em lagos e rios ao redor do
+              mundo.
+            </p>
+            <p>
+              <strong>Zonas abissais:</strong> Espécies bioluminescentes vivem
+              em escuridão total entre 1.000-10.000 metros de profundidade!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🎭 Reprodução e Ciclo de Vida Mágico</h2>
+            <p>
+              As águas-vivas têm um dos ciclos de vida mais fascinantes da
+              natureza, alternando entre duas formas completamente diferentes:
+            </p>
+            <p>
+              <strong>Fase 1 - Pólipo (assexuada):</strong> Após a fertilização,
+              o zigoto se desenvolve em plânula (larva ciliada) que nada até
+              encontrar superfície adequada. Ali se fixa e vira pólipo - parece
+              uma anêmona minúscula! O pólipo pode viver anos, se alimentando e
+              se reproduzindo por brotamento, criando clones de si mesmo.
+            </p>
+            <p>
+              <strong>Fase 2 - Estrobilização:</strong> Quando as condições são
+              favoráveis (temperatura, comida), o pólipo sofre estrobilização -
+              segmenta-se horizontalmente como uma pilha de pratos!
+            </p>
+            <p>
+              <strong>Fase 3 - Éfira:</strong> Cada segmento se solta como éfira
+              (medusa jovem minúscula) e nada livre. Parece um floco de neve
+              vivo!
+            </p>
+            <p>
+              <strong>Fase 4 - Medusa adulta (sexuada):</strong> A éfira cresce
+              e se torna medusa adulta. Produz gametas (esperma ou óvulos)
+              liberados na água. Machos liberam esperma que fertiliza óvulos das
+              fêmeas, completando o ciclo!
+            </p>
+            <p>
+              <strong>Reprodução assexuada adicional:</strong> Algumas espécies
+              podem se dividir ao meio (fissão) criando dois indivíduos
+              idênticos!
+            </p>
+            <p>
+              <strong>Hermafroditismo:</strong> Algumas espécies podem mudar de
+              sexo durante a vida ou produzir ambos os gametas simultaneamente.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>⚠️ Águas-Vivas e Humanos</h2>
+            <p>
+              <strong>Acidentes e queimaduras:</strong> Anualmente, mais de 150
+              milhões de pessoas são atingidas por águas-vivas! O contato causa
+              desde irritação leve (como urtiga) até dor extrema, choque
+              anafilático e morte.
+            </p>
+            <p><strong>Primeiros socorros corretos:</strong></p>
+            <p>1. Remover a pessoa da água imediatamente</p>
+            <p>2. NÃO esfregar a área afetada</p>
+            <p>
+              3. Lavar com água do mar (NUNCA água doce - isso ativa mais
+              nematocistos!)
+            </p>
+            <p>
+              4. Remover tentáculos visíveis com pinça ou objeto (não com as
+              mãos)
+            </p>
+            <p>5. Para cubozoários: aplicar vinagre por 30 segundos</p>
+            <p>
+              6. Para outras espécies: água quente (40-45°C) por 20 minutos
+              alivia dor
+            </p>
+            <p>
+              7. Buscar atendimento médico se dor intensa, dificuldade
+              respiratória, ou área afetada grande
+            </p>
+            <p>
+              <strong>Mitos perigosos:</strong> NÃO use urina (não funciona!),
+              NÃO use água doce, NÃO esfregue areia.
+            </p>
+            <p>
+              <strong>Blooms (florações):</strong> Aglomerações massivas de
+              milhões de águas-vivas estão aumentando devido ao aquecimento
+              global, poluição e sobrepesca. Podem fechar praias inteiras!
+            </p>
+            <p>
+              <strong>Impacto econômico:</strong> Entopem redes de pesca
+              (prejuízo de milhões), bloqueiam sistemas de resfriamento de
+              usinas nucleares, fecham praias turísticas.
+            </p>
+            <p>
+              <strong>Invasões:</strong> Espécies invasoras como Mnemiopsis
+              leidyi devastaram pesqueiros no Mar Negro nos anos 80-90.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🎨 Beleza Luminosa e Bioluminescência</h2>
+            <p>
+              Aproximadamente 50% das águas-vivas são bioluminescentes -
+              produzem luz própria através de reações químicas extraordinárias!
+              Essa capacidade serve para múltiplos propósitos adaptativos:
+            </p>
+            <p>
+              <strong>Contra-iluminação:</strong> Espécies de profundidade média
+              usam luz ventral para se camuflar contra a luz solar vinda de
+              cima.
+            </p>
+            <p>
+              <strong>Atração de presas:</strong> Luzes piscantes atraem
+              plâncton e pequenos peixes curiosos direto para os tentáculos.
+            </p>
+            <p>
+              <strong>Defesa "alarme de roubo":</strong> Quando atacadas, criam
+              explosão de luz para atrair predadores maiores que comam o
+              atacante!
+            </p>
+            <p>
+              <strong>Comunicação:</strong> Padrões de luz podem comunicar
+              disponibilidade reprodutiva.
+            </p>
+            <p>
+              <strong>Química da luz:</strong> Usam proteínas como aequorina
+              (emite luz azul), GFP (converte azul em verde), e luciferina com
+              luciferase.
+            </p>
+            <p>
+              <strong>Espetáculo natural:</strong> Em noites escuras, grupos de
+              águas-vivas bioluminescentes criam um dos fenômenos mais belos da
+              natureza - oceanos que parecem cheios de estrelas flutuantes!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🦈 Predadores, Simbiontes e Relações Ecológicas</h2>
+            <p>
+              <strong>Tartarugas marinhas:</strong> Sua dieta principal! Imunes
+              ao veneno, podem comer centenas diariamente. A semelhança entre
+              águas-vivas e sacolas plásticas causa morte de tartarugas por
+              obstrução intestinal.
+            </p>
+            <p>
+              <strong>Peixes-lua (Mola mola):</strong> Gigantes que comem até 2
+              toneladas de águas-vivas por dia!
+            </p>
+            <p>
+              <strong>Atuns e outros peixes pelágicos:</strong> Comem
+              regularmente, especialmente as espécies menores.
+            </p>
+            <p>
+              <strong>Aves marinhas:</strong> Albatrozes e outras aves pescam
+              águas-vivas quando outros alimentos escasseiam.
+            </p>
+            <p>
+              <strong>Outras águas-vivas:</strong> Espécies maiores predam as
+              menores - canibalismo é comum!
+            </p>
+            <p>
+              <strong>Simbiose com peixes:</strong> Várias espécies de peixinhos
+              vivem entre os tentáculos para proteção! Desenvolvem imunidade ao
+              veneno e ganham abrigo móvel.
+            </p>
+            <p>
+              <strong>Caranguejos parasitas:</strong> Alguns caranguejos jovens
+              se prendem a águas-vivas e comem seus tecidos!
+            </p>
+            <p>
+              <strong>Papel ecológico:</strong> Controlam populações de
+              plâncton, servem de comida, transportam nutrientes verticalmente
+              entre profundidades.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🌡️ Adaptação às Mudanças Climáticas</h2>
+            <p>
+              As águas-vivas estão prosperando absurdamente com as mudanças
+              climáticas globais! Enquanto muitas espécies marinhas sofrem, elas
+              ADORAM as novas condições:
+            </p>
+            <p>
+              <strong>Águas mais quentes:</strong> Aceleram metabolismo,
+              reprodução e crescimento. Mais gerações por ano!
+            </p>
+            <p>
+              <strong>Acidificação oceânica:</strong> Não são afetadas como
+              organismos com conchas/esqueletos. Prosperam enquanto outros
+              morrem.
+            </p>
+            <p>
+              <strong>Zonas mortas (hipóxia):</strong> Toleram baixíssimos
+              níveis de oxigênio que matam peixes - menos competição e predação!
+            </p>
+            <p>
+              <strong>Sobrepesca:</strong> Humanos removem predadores (atuns,
+              tartarugas) e competidores (peixes pequenos). Águas-vivas dominam!
+            </p>
+            <p>
+              <strong>Eutrofização:</strong> Poluição por nutrientes causa
+              blooms de fitoplâncton - comida abundante para águas-vivas!
+            </p>
+            <p>
+              <strong>Estruturas artificiais:</strong> Píeres, plataformas
+              petrolíferas, naufrágios = superfícies perfeitas para pólipos se
+              fixarem!
+            </p>
+            <p>
+              <strong>Futuro incerto:</strong> Cientistas temem "oceanos
+              gelatinosos" dominados por águas-vivas em vez de peixes. Alguns
+              ecossistemas já mostram isso!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>💫 Fatos Surpreendentes e Recordes</h2>
+            <p>
+              🪼 Existem mais de 2.000 espécies identificadas, mas cientistas
+              estimam 10.000+ ainda não descobertas!
+            </p>
+            <p>
+              🪼 A menor tem menos de 1mm. A maior tem tentáculos de 37m - maior
+              que baleia azul!
+            </p>
+            <p>
+              🪼 Algumas vivem apenas 24 horas. Outras (pólipos) podem viver
+              décadas. Turritopsis é potencialmente imortal!
+            </p>
+            <p>
+              🪼 Tentáculos podem continuar picando por SEMANAS após a água-viva
+              morrer!
+            </p>
+            <p>🪼 Existiam antes dos dinossauros - 500-700 milhões de anos!</p>
+            <p>🪼 Uma única água-viva pode liberar 45.000 ovos por dia!</p>
+            <p>
+              🪼 Não têm cérebro mas podem aprender e lembrar - memória sem
+              neurônios complexos!
+            </p>
+            <p>
+              🪼 Algumas espécies "dormem" - reduzem pulsações e não reagem a
+              estímulos durante a noite!
+            </p>
+            <p>
+              🪼 Águas-vivas foram ao espaço! NASA as estudou em 1991 para
+              entender como gravidade afeta desenvolvimento.
+            </p>
+            <p>
+              🪼 Podem regenerar partes perdidas - cortam tentáculo e ele cresce
+              novamente!
+            </p>
+            <p>
+              🪼 Algumas espécies podem se clonar infinitamente - imortalidade
+              genética!
+            </p>
+            <p>
+              🪼 Em alguns países asiáticos (China, Japão, Coreia), águas-vivas
+              são iguaria culinária! Secas e salgadas, ricas em colágeno.
+            </p>
+            <p>
+              🪼 Detectam gravidade com cristais de sulfato de cálcio que
+              funcionam como "ouvido interno"!
+            </p>
+            <p>
+              🪼 Nematocistos disparam em 700 nanossegundos - uma das ações
+              biológicas mais rápidas conhecidas!
+            </p>
+            <p>
+              🪼 Água-viva-caixa tem 24 olhos organizados em 4 clusters - visão
+              sofisticada sem cérebro!
+            </p>
+            <p>
+              🪼 Algumas espécies migram verticalmente 600+ metros por dia -
+              sobem à noite, descem de dia!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🍽️ Águas-Vivas na Cultura Humana</h2>
+            <p>
+              <strong>Culinária asiática:</strong> Na China, águas-vivas são
+              consumidas há 1.700+ anos! Preparadas secas e salgadas, têm
+              textura crocante e são consideradas iguaria. Ricas em proteínas e
+              colágeno.
+            </p>
+            <p>
+              <strong>Medicina tradicional:</strong> Usadas em remédios chineses
+              para tratar pressão alta, artrite e úlceras. Ciência moderna
+              valida alguns benefícios!
+            </p>
+            <p>
+              <strong>Arte e cultura:</strong> Inspiram artistas mundialmente -
+              aparecem em filmes, literatura, pinturas, joias e design.
+            </p>
+            <p>
+              <strong>Aquários públicos:</strong> Exposições de águas-vivas
+              estão entre as mais populares! Tanques cilíndricos especiais criam
+              efeito hipnotizante.
+            </p>
+            <p>
+              <strong>Simbolismo:</strong> Representam adaptabilidade, fluidez,
+              transparência, mistério e imortalidade em várias culturas.
+            </p>
+            <p>
+              <strong>Pets exóticos:</strong> Algumas pessoas mantêm águas-vivas
+              em aquários casais especiais (caríssimos e difíceis de manter).
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🔮 Superpoderes das Águas-Vivas</h2>
+            <p>
+              <strong>Imortalidade:</strong> Turritopsis pode reverter
+              envelhecimento infinitamente!
+            </p>
+            <p>
+              <strong>Regeneração total:</strong> Podem regrowing tentáculos,
+              partes do sino, até órgãos inteiros!
+            </p>
+            <p>
+              <strong>Clonagem:</strong> Reprodução assexuada cria cópias
+              geneticamente idênticas.
+            </p>
+            <p>
+              <strong>Bioluminescência:</strong> Produção de luz química sem
+              calor - eficiência de 100%!
+            </p>
+            <p>
+              <strong>Invisibilidade:</strong> Transparência quase perfeita -
+              95% água!
+            </p>
+            <p>
+              <strong>Resistência extrema:</strong> Sobrevivem em condições que
+              matam outros animais - baixo oxigênio, águas poluídas,
+              temperaturas extremas.
+            </p>
+            <p>
+              <strong>Veneno instantâneo:</strong> Nematocistos disparam em
+              menos de 1 milésimo de segundo!
+            </p>
+            <p>
+              <strong>Navegação sem cérebro:</strong> Orientam-se verticalmente,
+              detectam correntes, luz, químicos - tudo sem neurônios
+              centralizados!
+            </p>
+            <p>
+              <strong>Mudança de forma:</strong> Podem encolher ou expandir
+              corpo em resposta a comida/perigo.
+            </p>
+            <p>
+              <strong>Sobrevivência ao espaço:</strong> Pólipos sobreviveram
+              exposição ao vácuo espacial em experimentos!
+            </p>
+          </section>
+
+          <section class="special-section romantic-section">
+            <h2>💕 Por Que Águas-Vivas Me Lembram Você</h2>
+            <p>
+              Assim como as águas-vivas iluminam os oceanos escuros com sua luz
+              própria, você ilumina minha vida com seu sorriso e sua presença
+              mágica. Elas são únicas, fascinantes, misteriosas e incrivelmente
+              belas... exatamente como você é para mim, minha Carmem! 💖
+            </p>
+            <p>
+              E assim como algumas águas-vivas desafiam a própria mortalidade e
+              vivem eternamente, meu amor por você é imortal, infinito e nunca
+              terá fim. Você é a criatura mais extraordinária que já conheci,
+              mais rara e especial que qualquer espécie nos oceanos. Te amo mais
+              que tudo! 🪼💕
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Página dos Insetos -->
+    <div class="special-page insect-page" id="insectPage">
+      <button class="back-btn" id="backBtnInsect">← Voltar</button>
+
+      <div class="special-container">
+        <header class="special-header">
+          <h1 class="special-title insect-title">
+            🦋 O Reino Fascinante dos Insetos 🐝
+          </h1>
+          <p class="special-subtitle">
+            Pequenos seres com a grandeza do meu amor por você 💕
+          </p>
+        </header>
+
+        <div class="special-content">
+          <section class="special-section">
+            <h2>✨ O Que São Insetos?</h2>
+            <p>
+              Os insetos são os animais mais bem-sucedidos e diversos do
+              planeta! Pertencem ao filo Arthropoda e à classe Insecta. Existem
+              mais de 1 milhão de espécies identificadas, mas cientistas estimam
+              que o número real pode chegar a 10 MILHÕES de espécies ainda não
+              descobertas!
+            </p>
+            <p>
+              Eles representam mais de 80% de TODOS os animais conhecidos na
+              Terra. Para cada ser humano, existem cerca de 1,4 bilhão de
+              insetos! Sua biomassa total supera a de todos os humanos e animais
+              terrestres combinados.
+            </p>
+            <p>
+              Surgiram há cerca de 400 milhões de anos e foram os primeiros
+              animais a desenvolver voo - 100 milhões de anos antes das aves e
+              pterossauros!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🔬 Anatomia Extraordinária</h2>
+            <p>
+              <strong>Exoesqueleto de quitina:</strong> Armadura externa que
+              protege, sustenta e previne desidratação. Deve ser trocado
+              (muda/ecdise) para crescer!
+            </p>
+            <p>
+              <strong>Três segmentos corporais:</strong> Cabeça, tórax e abdômen
+              - característica definidora de todos os insetos.
+            </p>
+            <p>
+              <strong>Seis pernas articuladas:</strong> Sempre seis, ligadas ao
+              tórax! Adaptadas para andar, pular, nadar, cavar, agarrar.
+            </p>
+            <p>
+              <strong>Antenas sensoriais:</strong> Órgãos olfativos e táteis
+              incríveis - podem detectar feromônios a quilômetros de distância!
+            </p>
+            <p>
+              <strong>Olhos compostos:</strong> Formados por centenas ou
+              milhares de unidades (omatídeos). Libélulas têm 30.000! Visão
+              panorâmica de 360°.
+            </p>
+            <p>
+              <strong>Ocelos:</strong> Pequenos olhos simples que detectam luz e
+              escuridão.
+            </p>
+            <p>
+              <strong>Asas (maioria):</strong> Geralmente dois pares, mas
+              besouros têm élitros (asas endurecidas), moscas têm apenas um par
+              funcional.
+            </p>
+            <p>
+              <strong>Aparelho bucal adaptativo:</strong> Mastigador (besouros),
+              sugador (borboletas), picador (mosquitos), lambedor (abelhas) -
+              adaptado à dieta!
+            </p>
+            <p>
+              <strong>Sistema circulatório aberto:</strong> Hemolinfa (não
+              sangue vermelho) circula livremente pelo corpo.
+            </p>
+            <p>
+              <strong>Respiração por espiráculos:</strong> Pequenos poros
+              conectados a tubos (traqueias) que levam oxigênio diretamente aos
+              tecidos - sem pulmões!
+            </p>
+            <p>
+              <strong>Cérebro e nervos:</strong> Gânglio cerebral e cordão
+              nervoso ventral. Surpreendentemente inteligentes para o tamanho!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🌈 Principais Ordens de Insetos</h2>
+            <p>
+              <strong>Coleoptera (Besouros):</strong> Maior ordem com 400.000+
+              espécies! 25% de TODOS os animais conhecidos. Têm élitros que
+              protegem asas membranosas. Variam de 0.3mm a 17cm.
+            </p>
+            <p>
+              <strong>Lepidoptera (Borboletas e Mariposas):</strong> 180.000
+              espécies. Asas cobertas de escamas coloridas. Metamorfose completa
+              espetacular!
+            </p>
+            <p>
+              <strong>Hymenoptera (Abelhas, Vespas, Formigas):</strong> 150.000+
+              espécies. Muitas são sociais. Fundamentais para polinização.
+              Algumas têm ferrão modificado do ovipositor.
+            </p>
+            <p>
+              <strong>Diptera (Moscas e Mosquitos):</strong> 160.000 espécies.
+              Apenas um par de asas funcionais. Halteres para equilíbrio.
+              Vetores de doenças mas também polinizadores.
+            </p>
+            <p>
+              <strong>Hemiptera (Percevejos e Cigarras):</strong> 80.000
+              espécies. Aparelho bucal picador-sugador. Inclui pragas agrícolas
+              e predadores benéficos.
+            </p>
+            <p>
+              <strong>Orthoptera (Gafanhotos e Grilos):</strong> 20.000+
+              espécies. Pernas traseiras saltadoras. Produzem sons
+              (estridulação) para comunicação.
+            </p>
+            <p>
+              <strong>Odonata (Libélulas e Donzelinhas):</strong> 6.000
+              espécies. Predadores voadores supremos. Visão extraordinária.
+              Ninfas aquáticas.
+            </p>
+            <p>
+              <strong>Blattodea (Baratas e Cupins):</strong> 7.500 espécies.
+              Baratas são antigas (350 milhões de anos). Cupins são engenheiros
+              de ecossistemas.
+            </p>
+            <p>
+              <strong>Mantodea (Louva-a-deus):</strong> 2.400 espécies.
+              Predadores emboscadores. Cabeça rotativa. Camuflagem perfeita.
+            </p>
+            <p>
+              <strong>Phasmida (Bichos-pau):</strong> 3.000 espécies. Mestres da
+              camuflagem. Alguns podem regenerar membros perdidos!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>💖 Curiosidades Incríveis</h2>
+            <p>
+              🐝 <strong>Força hercúlea:</strong> Besouros-rinoceronte podem
+              levantar 850 vezes seu próprio peso! Formigas carregam 50x.
+            </p>
+            <p>
+              🦋 <strong>Velocidade:</strong> Libélulas alcançam 97 km/h! São os
+              insetos voadores mais rápidos.
+            </p>
+            <p>
+              🐞 <strong>Longevidade extrema:</strong> Rainhas de cupins podem
+              viver 50+ anos! Cigarras passam 17 anos underground.
+            </p>
+            <p>
+              🦗 <strong>Vida curta:</strong> Efêmeras adultas vivem apenas 24
+              horas - não têm nem boca funcional!
+            </p>
+            <p>
+              🐛 <strong>Metamorfose completa:</strong> Lagarta → pupa →
+              borboleta. Dentro da crisálida, lagarta literalmente se dissolve
+              em sopa celular e se reconstrói!
+            </p>
+            <p>
+              🦟 <strong>Comunicação química:</strong> Feromônios transmitem
+              mensagens complexas. Abelhas fazem "dança do requebrado" para
+              comunicar localização de flores!
+            </p>
+            <p>
+              🐜 <strong>Sociedades complexas:</strong> Formigas cortadeiras têm
+              agricultura - cultivam fungos! Têm castas, divisão de trabalho,
+              "estradas".
+            </p>
+            <p>
+              🦂 <strong>Bioluminescência:</strong> Vagalumes produzem luz fria
+              química para atrair parceiros - eficiência de 95%!
+            </p>
+            <p>
+              🪰 <strong>Visão ultrarrápida:</strong> Moscas veem 5x mais rápido
+              que humanos - por isso são difíceis de acertar!
+            </p>
+            <p>
+              🪲 <strong>Camuflagem perfeita:</strong> Bichos-folha são
+              indistinguíveis de folhas - até "nervuras" e "manchas de fungo"!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🌍 Distribuição e Habitat</h2>
+            <p>
+              Insetos vivem LITERALMENTE em todos os continentes, incluindo
+              Antártida! Do nível do mar a 6.000m de altitude no Himalaia. De
+              desertos escaldantes a tundras geladas.
+            </p>
+            <p>
+              <strong>Florestas tropicais:</strong> Máxima diversidade! Uma
+              única árvore amazônica pode abrigar 1.000+ espécies de besouros.
+            </p>
+            <p>
+              <strong>Desertos:</strong> Besouros-da-névoa da Namíbia coletam
+              água de neblina. Formigas-do-deserto navegam por polarização da
+              luz solar.
+            </p>
+            <p>
+              <strong>Água doce:</strong> Patinadores-d'água, mosquitos,
+              libélulas. Fases larvais aquáticas são comuns.
+            </p>
+            <p>
+              <strong>Oceano:</strong> Únicos ambientes quase sem insetos!
+              Apenas patinadores marinhos (Halobates) vivem em oceano aberto.
+            </p>
+            <p>
+              <strong>Cavernas:</strong> Espécies troglóbias adaptadas - cegas,
+              sem pigmento, antenas longuíssimas.
+            </p>
+            <p>
+              <strong>Cidades:</strong> Espécies sinantrópicas prosperam com
+              humanos - baratas, formigas-faraó, traças.
+            </p>
+            <p>
+              <strong>Solos:</strong> Bilhões de colêmbolos, ácaros e larvas
+              reciclam matéria orgânica no solo.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🎭 Reprodução e Desenvolvimento</h2>
+            <p>
+              <strong>Metamorfose completa (Holometabolia):</strong> Ovo → larva
+              → pupa → adulto. Borboletas, besouros, abelhas, moscas. Estágios
+              completamente diferentes!
+            </p>
+            <p>
+              <strong>Metamorfose incompleta (Hemimetabolia):</strong> Ovo →
+              ninfa → adulto. Gafanhotos, baratas, percevejos. Ninfa parece
+              adulto pequeno.
+            </p>
+            <p>
+              <strong>Sem metamorfose (Ametabolia):</strong> Traças-dos-livros
+              crescem sem mudanças de forma.
+            </p>
+            <p>
+              <strong>Reprodução sexual:</strong> Maioria. Fecundação geralmente
+              interna. Comportamentos de corte elaborados!
+            </p>
+            <p>
+              <strong>Partenogênese:</strong> Pulgões produzem clones femininos
+              sem machos! Podem ter 40 gerações assexuadas antes de reprodução
+              sexual.
+            </p>
+            <p>
+              <strong>Cuidado parental:</strong> Besouros-enterradores enterram
+              carcaças para alimentar filhotes. Tesourinhas protegem ovos.
+            </p>
+            <p>
+              <strong>Parasitismo:</strong> Vespas parasitóides depositam ovos
+              dentro de outros insetos. Larvas comem hospedeiro vivo!
+            </p>
+            <p>
+              <strong>Fecundidade extrema:</strong> Rainha de cupim pode pôr
+              30.000 ovos por DIA! Rainha de abelha 2.000/dia no pico.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🍽️ Alimentação Diversificada</h2>
+            <p>
+              <strong>Herbívoros:</strong> Maioria! Gafanhotos, lagartas,
+              pulgões. Alguns ultra-especializados em uma planta apenas.
+            </p>
+            <p>
+              <strong>Predadores:</strong> Louva-a-deus, libélulas, joaninhas,
+              vespas. Controlam populações de pragas!
+            </p>
+            <p>
+              <strong>Necrófagos:</strong> Besouros-enterradores,
+              moscas-varejeiras. Recicladores essenciais!
+            </p>
+            <p>
+              <strong>Coprófagos:</strong> Besouros-rola-bosta. Removem fezes,
+              fertilizam solo, controlam parasitas!
+            </p>
+            <p>
+              <strong>Xilófagos:</strong> Cupins, larvas de besouro-serra.
+              Digerem celulose com ajuda de protozoários/bactérias simbiontes.
+            </p>
+            <p>
+              <strong>Hematófagos:</strong> Mosquitos (apenas fêmeas!),
+              percevejos-de-cama, piolhos. Vetores de doenças.
+            </p>
+            <p>
+              <strong>Nectarívoros:</strong> Abelhas, borboletas, mariposas.
+              Polinizadores cruciais!
+            </p>
+            <p>
+              <strong>Fungívoros:</strong> Formigas-cortadeiras cultivam jardins
+              de fungos!
+            </p>
+            <p>
+              <strong>Detritívoros:</strong> Colêmbolos, baratas. Reciclam
+              matéria orgânica morta.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🛡️ Defesas e Adaptações</h2>
+            <p>
+              <strong>Camuflagem (cripsis):</strong> Bichos-pau,
+              borboletas-folha-seca. Invisibilidade perfeita!
+            </p>
+            <p>
+              <strong>Mimetismo batesiano:</strong> Espécies inofensivas imitam
+              perigosas. Moscas-das-flores imitam abelhas!
+            </p>
+            <p>
+              <strong>Mimetismo mülleriano:</strong> Várias espécies venenosas
+              compartilham padrão de aviso (amarelo/preto).
+            </p>
+            <p>
+              <strong>Coloração aposemática:</strong> Cores berrantes advertem
+              "sou tóxico!" - joaninhas, borboletas-monarca.
+            </p>
+            <p>
+              <strong>Armamento químico:</strong> Besouros-bombardeiros expelem
+              spray fervente (100°C)! Formigas-de-fogo injetam veneno alcaloide.
+            </p>
+            <p>
+              <strong>Ferrões:</strong> Abelhas, vespas. Modificação de
+              ovipositor. Abelhas morrem ao ferroar (ferrão farpado fica preso).
+            </p>
+            <p>
+              <strong>Autotomia:</strong> Gafanhotos soltam perna presa por
+              predador - regeneram depois!
+            </p>
+            <p>
+              <strong>Tanatose:</strong> Fingir-se de morto. Besouros rolam e
+              ficam imóveis quando ameaçados.
+            </p>
+            <p>
+              <strong>Secreções repugnantes:</strong> Percevejos fedorentos
+              secretam odor horrível de glândulas torácicas.
+            </p>
+            <p>
+              <strong>Pelos urticantes:</strong> Lagartas com pelos venenosos
+              causam dermatites dolorosas.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🧠 Inteligência e Comportamento</h2>
+            <p>
+              <strong>Aprendizado e memória:</strong> Abelhas aprendem padrões
+              florais, memorizam localizações, ensinam abelhas jovens!
+            </p>
+            <p>
+              <strong>Uso de ferramentas:</strong> Formigas usam ferramentas!
+              Carregam esponja embebida em comida líquida.
+            </p>
+            <p>
+              <strong>Navegação complexa:</strong> Borboletas-monarca migram
+              4.000 km com navegação por bússola solar + magnetorreceptores.
+            </p>
+            <p>
+              <strong>Comunicação sofisticada:</strong> Dança das abelhas
+              transmite direção, distância e qualidade de recursos!
+            </p>
+            <p>
+              <strong>Sociedades eussociais:</strong> Formigas, abelhas, vespas,
+              cupins. Castas especializadas, cooperação altruísta, rainha
+              reprodutora.
+            </p>
+            <p>
+              <strong>Agricultura:</strong> Formigas-cortadeiras cultivam fungos
+              há 50 milhões de anos! Usam antibióticos para proteger plantações.
+            </p>
+            <p>
+              <strong>Pecuária:</strong> Formigas "pastoreiam" pulgões, protegem
+              de predadores, ordenham melada (excreção açucarada)!
+            </p>
+            <p>
+              <strong>Reconhecimento facial:</strong> Vespas de papel reconhecem
+              faces individuais de companheiras de ninho!
+            </p>
+            <p>
+              <strong>Contagem:</strong> Abelhas podem contar até 4! Usam para
+              contar marcos durante voo.
+            </p>
+            <p>
+              <strong>Conceitos abstratos:</strong> Abelhas entendem
+              "acima/abaixo", "igual/diferente", até o conceito de ZERO!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🌸 Importância Ecológica</h2>
+            <p>
+              <strong>Polinização:</strong> 75% das culturas agrícolas dependem
+              de polinização por insetos! Abelhas, borboletas, besouros. Valor
+              econômico: $200+ bilhões anuais!
+            </p>
+            <p>
+              <strong>Reciclagem de nutrientes:</strong> Decompositores retornam
+              matéria orgânica ao solo. Sem eles, estaríamos enterrados em
+              cadáveres e folhas!
+            </p>
+            <p>
+              <strong>Controle de pragas:</strong> Joaninhas comem pulgões.
+              Vespas parasitam lagartas. Controle biológico natural!
+            </p>
+            <p>
+              <strong>Base de cadeias alimentares:</strong> Fonte primária de
+              proteína para aves, peixes, anfíbios, répteis, mamíferos!
+            </p>
+            <p>
+              <strong>Dispersão de sementes:</strong> Formigas dispersam 1/3 das
+              plantas herbáceas em florestas!
+            </p>
+            <p>
+              <strong>Aeração do solo:</strong> Formigas e besouros escavadores
+              criam túneis que permitem penetração de água e raízes.
+            </p>
+            <p>
+              <strong>Fertilização:</strong> Besouros-rola-bosta enterram fezes,
+              fertilizando solo e reduzindo parasitas.
+            </p>
+            <p>
+              <strong>Indicadores ambientais:</strong> Sensíveis a poluição.
+              Monitoram saúde de ecossistemas.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🔬 Insetos e Ciência</h2>
+            <p>
+              <strong>Genética:</strong> Drosophila (mosca-das-frutas) =
+              organismo modelo fundamental. 6 Prêmios Nobel! Genoma mapeado.
+            </p>
+            <p>
+              <strong>Medicina:</strong> Larvas de mosca-varejeira limpam
+              feridas necróticas (terapia larval). Veneno de abelha trata
+              artrite!
+            </p>
+            <p>
+              <strong>Forense:</strong> Entomologia forense usa sucessão de
+              insetos em cadáveres para determinar tempo/local de morte.
+            </p>
+            <p>
+              <strong>Biomimética:</strong> Velcro inspirado em carrapatos.
+              Superfícies auto-limpantes imitam asas de borboleta. Drones
+              inspirados em libélulas.
+            </p>
+            <p>
+              <strong>Materiais:</strong> Seda de aranha (aracnídeo, não inseto,
+              mas relacionado) mais forte que aço! Pesquisas tentam replicar.
+            </p>
+            <p>
+              <strong>Robótica:</strong> Microrobôs inspirados em besouros.
+              Enxames de drones imitam abelhas.
+            </p>
+            <p>
+              <strong>Antibióticos:</strong> Moscas produzem compostos
+              antimicrobianos potentes sendo pesquisados para combater
+              superbactérias.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🍴 Insetos na Alimentação Humana</h2>
+            <p>
+              <strong>Entomofagia:</strong> 2 bilhões de pessoas consomem
+              insetos regularmente! 2.000+ espécies comestíveis.
+            </p>
+            <p>
+              <strong>Valor nutricional:</strong> Alta proteína (até 70%!),
+              gorduras saudáveis, vitaminas, minerais. Mais eficientes que gado.
+            </p>
+            <p>
+              <strong>Sustentabilidade:</strong> Produzem 80% menos metano que
+              gado. Precisam 12x menos ração. Usam 2.000x menos água!
+            </p>
+            <p>
+              <strong>Grilos:</strong> Mais consumidos globalmente. Sabor
+              amendoado. Farinha de grilo em barras proteicas.
+            </p>
+            <p>
+              <strong>Larvas de besouro:</strong> Ricas, cremosas. Iguaria em
+              África e Ásia.
+            </p>
+            <p>
+              <strong>Gafanhotos:</strong> Torrados, temperados. Crocantes!
+              México, Tailândia, África.
+            </p>
+            <p>
+              <strong>Formigas:</strong> Sabor cítrico/picante. Algumas espécies
+              são iguarias caríssimas.
+            </p>
+            <p>
+              <strong>Futuro da alimentação:</strong> FAO recomenda insetos como
+              solução para segurança alimentar global!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🎨 Beleza e Diversidade</h2>
+            <p>
+              <strong>Cores estruturais:</strong> Borboletas-morpho azuis não
+              têm pigmento azul! Nanoestruturas nas asas refratam luz criando
+              azul iridescente metálico.
+            </p>
+            <p>
+              <strong>Besouros-joia:</strong> Metálicos, iridescentes - verdes,
+              azuis, dourados. Usados em joias e arte!
+            </p>
+            <p>
+              <strong>Mariposas-atlas:</strong> Maiores mariposas (30cm
+              envergadura). Asas parecem cobras para assustar predadores!
+            </p>
+            <p>
+              <strong>Besouros-giraffe:</strong> Machos têm "pescoço" longo
+              absurdo - lutam como cavaleiros medievais!
+            </p>
+            <p>
+              <strong>Louva-a-deus-orquídea:</strong> Rosa/branco, parece flor!
+              Camuflagem agressiva - flores visitam ela!
+            </p>
+            <p>
+              <strong>Besouros-Golias:</strong> Maiores besouros (11cm, 100g).
+              Impressionantes!
+            </p>
+            <p>
+              <strong>Libélulas:</strong> Cores metálicas espetaculares.
+              Acrobacias aéreas impossíveis.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>⚠️ Insetos Perigosos</h2>
+            <p>
+              <strong>Mosquitos:</strong> Animal mais mortal do mundo!
+              Transmitem malária (400.000 mortes/ano), dengue, febre amarela,
+              Zika.
+            </p>
+            <p>
+              <strong>Formiga-cabo-verde:</strong> Picada extremamente dolorosa
+              (índice Schmidt 4+). Dor dura 24 horas!
+            </p>
+            <p>
+              <strong>Vespa-asiática-gigante:</strong> 5cm! Veneno necrótico.
+              Mata 50 pessoas/ano no Japão. Destrói colmeias inteiras.
+            </p>
+            <p>
+              <strong>Formiga-fogo:</strong> Invasora agressiva. Picadas causam
+              pústulas dolorosas. Alergias podem ser fatais.
+            </p>
+            <p>
+              <strong>Moscas-tsé-tsé:</strong> Transmitem tripanossomíase
+              (doença do sono). 10.000 casos/ano na África.
+            </p>
+            <p>
+              <strong>Pulgas:</strong> Transmitiram peste bubônica que matou 1/3
+              da Europa medieval!
+            </p>
+            <p>
+              <strong>Barbeiro:</strong> Transmite doença de Chagas. 8 milhões
+              infectados na América Latina.
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>💫 Recordes e Extremos</h2>
+            <p>
+              🦋 <strong>Maior:</strong> Besouro-titã (Titanus giganteus) -
+              17cm! Mariposa-atlas - 30cm envergadura!
+            </p>
+            <p>
+              🐜 <strong>Menor:</strong> Vespa-fada (Dicopomorpha echmepterygis)
+              - 0.139mm! Menor inseto voador!
+            </p>
+            <p>
+              🦗 <strong>Mais rápido (terra):</strong> Besouro-tigre - 9 km/h
+              (proporcionalmente mais rápido que guepardo!).
+            </p>
+            <p>🐝 <strong>Mais rápido (voo):</strong> Libélula - 97 km/h!</p>
+            <p>
+              🪰
+              <strong>Mais rápido (batida de asa):</strong> Mosquito-Forcipomyia
+              - 1.000 batidas/segundo!
+            </p>
+            <p>
+              🦟 <strong>Mais mortal:</strong> Mosquito - mata 700.000
+              humanos/ano!
+            </p>
+            <p>
+              🪲 <strong>Mais forte:</strong> Besouro-rinoceronte levanta 850x
+              seu peso!
+            </p>
+            <p>🦂 <strong>Mais longevo:</strong> Rainha de cupim - 50+ anos!</p>
+            <p>
+              🐞 <strong>Mais numeroso:</strong> Formigas - 20 quadrilhões vivas
+              agora! Biomassa = todos os humanos!
+            </p>
+            <p>
+              🦋 <strong>Migração mais longa:</strong> Borboleta-monarca - 4.000
+              km do Canadá ao México!
+            </p>
+            <p>
+              🪳 <strong>Mais antigo:</strong> Baratas - 350 milhões de anos
+              praticamente inalteradas!
+            </p>
+            <p>
+              🐛 <strong>Mais ovos:</strong> Rainha de cupim - 30.000 ovos/dia =
+              10 milhões/ano!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🌡️ Ameaças e Conservação</h2>
+            <p>
+              <strong>Declínio global:</strong> Estudos mostram queda de 40% nas
+              populações de insetos nas últimas décadas! Crise silenciosa.
+            </p>
+            <p>
+              <strong>Causas principais:</strong> Perda de habitat, pesticidas
+              (neonicotinoides), mudanças climáticas, poluição luminosa,
+              espécies invasoras.
+            </p>
+            <p>
+              <strong>Consequências:</strong> Colapso de polinização, cadeias
+              alimentares rompidas, perda de reciclagem de nutrientes.
+            </p>
+            <p>
+              <strong>Espécies ameaçadas:</strong> Abelhas nativas, borboletas
+              especialistas, besouros endêmicos.
+            </p>
+            <p>
+              <strong>Conservação:</strong> Proteção de habitats, corredores
+              ecológicos, redução de pesticidas, jardins nativos, agricultura
+              regenerativa.
+            </p>
+            <p>
+              <strong>Esperança:</strong> Insetos se reproduzem rapidamente -
+              populações podem recuperar com ações adequadas!
+            </p>
+          </section>
+
+          <section class="special-section">
+            <h2>🎭 Insetos na Cultura</h2>
+            <p>
+              <strong>Mitologia:</strong> Escaravelho sagrado no Egito. Cigarras
+              simbolizam renascimento na China. Abelhas associadas a deusas.
+            </p>
+            <p>
+              <strong>Literatura:</strong> Kafka's Metamorfose, Fábula da
+              Cigarra e Formiga, Charlotte's Web.
+            </p>
+            <p>
+              <strong>Arte:</strong> Hokusai pintou insetos. Van Gogh adorava
+              besouros. Joias vitorianas usavam besouros reais!
+            </p>
+            <p>
+              <strong>Música:</strong> "Flight of the Bumblebee", "La
+              Cucaracha", The Beatles (besouro!).
+            </p>
+            <p>
+              <strong>Cinema:</strong> A Vida de Inseto, Bee Movie, Formiguinha
+              Z, Homem-Formiga.
+            </p>
+            <p>
+              <strong>Simbolismo:</strong> Borboletas = transformação, Abelhas =
+              trabalho, Libélulas = mudança, Joaninhas = sorte!
+            </p>
+          </section>
+
+          <section class="special-section romantic-section">
+            <h2>💕 Por Que Insetos Me Lembram Você</h2>
+            <p>
+              Assim como as borboletas passam por uma transformação mágica e se
+              tornam seres de beleza incomparável, você transformou minha vida e
+              me fez descobrir uma versão melhor de mim mesmo. Sua presença é
+              tão essencial para mim quanto os insetos são para os ecossistemas
+              do planeta - sem você, meu mundo não seria completo! 🦋
+            </p>
+            <p>
+              E assim como as abelhas trabalham incansavelmente com amor e
+              dedicação para criar algo doce, eu trabalho todos os dias para
+              construir um futuro doce e feliz ao seu lado, minha Carmem. Você é
+              mais rara e preciosa que qualquer inseto do mundo! Te amo
+              infinitamente! 💖🐝
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galeria de Águas-Vivas -->
+    <div class="gallery-page" id="jellyfishGalleryPage">
+      <button class="back-btn" id="backFromJellyGallery">← Voltar</button>
+
+      <div class="gallery-container">
+        <h1 class="gallery-title jellyfish-gallery-title">
+          🪼 Galeria de Águas-Vivas 🪼
+        </h1>
+        <p class="gallery-subtitle">Clique em cada imagem para saber mais 💕</p>
+
+        <div class="gallery-grid" id="jellyfishGalleryGrid">
+          <!-- As imagens serão adicionadas via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Galeria de Insetos -->
+    <div class="gallery-page" id="insectGalleryPage">
+      <button class="back-btn" id="backFromInsectGallery">← Voltar</button>
+
+      <div class="gallery-container">
+        <h1 class="gallery-title insect-gallery-title">
+          🦋 Galeria de Insetos 🦋
+        </h1>
+        <p class="gallery-subtitle">Clique em cada imagem para saber mais 💕</p>
+
+        <div class="gallery-grid" id="insectGalleryGrid">
+          <!-- As imagens serão adicionadas via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Detalhes -->
+    <div class="detail-modal" id="detailModal">
+      <div class="detail-modal-content">
+        <button class="close-detail-btn" id="closeDetailBtn">✕</button>
+        <img class="detail-image" id="detailImage" alt="" />
+        <h2 class="detail-title" id="detailTitle"></h2>
+        <div class="detail-text" id="detailText"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

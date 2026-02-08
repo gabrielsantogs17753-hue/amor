@@ -1,0 +1,1195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Estrelas no fundo */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.stars::before,
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  box-shadow:
+    100px 200px white,
+    200px 100px white,
+    300px 300px white,
+    400px 150px white,
+    500px 250px white,
+    150px 350px white,
+    250px 50px white,
+    350px 400px white,
+    450px 300px white,
+    550px 100px white,
+    50px 450px white,
+    600px 350px white,
+    700px 200px white,
+    800px 400px white,
+    900px 150px white;
+  animation: twinkle 3s infinite alternate;
+}
+
+.stars::after {
+  animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Corações flutuantes no fundo */
+.hearts-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.hearts-background::before,
+.hearts-background::after {
+  content: "💕";
+  position: absolute;
+  font-size: 30px;
+  opacity: 0.15;
+  animation: float 15s infinite;
+}
+
+.hearts-background::before {
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.hearts-background::after {
+  content: "💖";
+  left: 70%;
+  animation-delay: 5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.15;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Container principal */
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.container.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #ffe0f0;
+  font-style: italic;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Coração principal */
+.main-heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 30px 0;
+  cursor: pointer;
+  animation: fadeInScale 1.2s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.main-heart:hover {
+  transform: scale(1.15);
+}
+
+.heart-svg {
+  width: 100%;
+  height: 100%;
+  color: #ff69b4;
+  filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.6));
+  animation: pulse 2s infinite;
+}
+
+.heart-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Caixa de mensagem */
+.message-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgba(255, 255, 255, 0.98);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  z-index: 1000;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 3px solid #ff69b4;
+}
+
+.message-box.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#messageText {
+  color: #764ba2;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  background: #ff1493;
+  transform: rotate(90deg);
+}
+
+/* Grid de corações */
+.hearts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 40px 0;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.heart-button {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease-out backwards;
+}
+
+.heart-button:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.heart-button:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.heart-button:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.heart-button:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.heart-button:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.heart-button:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.heart-button:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.heart-icon {
+  width: 100%;
+  height: 100%;
+  color: #ff1493;
+  filter: drop-shadow(0 0 15px rgba(255, 20, 147, 0.5));
+  transition: color 0.3s ease;
+}
+
+.heart-button:hover .heart-icon {
+  color: #ff69b4;
+}
+
+/* Coração especial das águas-vivas */
+.jellyfish-heart {
+  position: relative;
+}
+
+.jellyfish-heart .heart-icon {
+  color: #00d4ff;
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8));
+  animation: jellyfishGlow 2s infinite alternate;
+}
+
+.jellyfish-heart:hover .heart-icon {
+  color: #00ffff;
+}
+
+.jellyfish-emoji {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  pointer-events: none;
+  animation: jellyfishFloat 3s infinite ease-in-out;
+}
+
+@keyframes jellyfishGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(0, 255, 255, 1));
+  }
+}
+
+@keyframes jellyfishFloat {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-5px);
+  }
+}
+
+/* Coração especial dos insetos */
+.insect-heart {
+  position: relative;
+}
+
+.insect-heart .heart-icon {
+  color: #32cd32;
+  filter: drop-shadow(0 0 20px rgba(50, 205, 50, 0.8));
+  animation: insectGlow 2s infinite alternate;
+}
+
+.insect-heart:hover .heart-icon {
+  color: #7fff00;
+}
+
+.insect-emoji {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  pointer-events: none;
+  animation: insectFly 2s infinite ease-in-out;
+}
+
+@keyframes insectGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 15px rgba(50, 205, 50, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(127, 255, 0, 1));
+  }
+}
+
+@keyframes insectFly {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateX(-3px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(3px);
+  }
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+}
+
+.footer p {
+  color: white;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
+
+/* =============================================== */
+/* PÁGINAS ESPECIAIS (ÁGUAS-VIVAS E INSETOS) */
+/* =============================================== */
+
+.special-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.special-page.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Página das Águas-Vivas */
+.jellyfish-page {
+  background: linear-gradient(135deg, #0a4d68 0%, #05445e 50%, #189ab4 100%);
+}
+
+/* Página dos Insetos */
+.insect-page {
+  background: linear-gradient(135deg, #2d5016 0%, #3d6e1f 50%, #6ba32a 100%);
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  z-index: 101;
+}
+
+.back-btn:hover {
+  background: #ff69b4;
+  color: white;
+  transform: translateX(-5px);
+}
+
+.special-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 60px;
+}
+
+.special-header {
+  text-align: center;
+  margin: 60px 0 40px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.special-title {
+  font-size: 2.8rem;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Título da página de águas-vivas */
+.jellyfish-title {
+  color: #00ffff;
+  animation: jellyfishTitleGlow 3s infinite alternate;
+}
+
+@keyframes jellyfishTitleGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 10px rgba(0, 255, 255, 0.8),
+      0 0 20px rgba(0, 255, 255, 0.6),
+      2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(0, 255, 255, 1),
+      0 0 40px rgba(0, 255, 255, 0.8),
+      2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Título da página de insetos */
+.insect-title {
+  color: #7fff00;
+  animation: insectTitleGlow 3s infinite alternate;
+}
+
+@keyframes insectTitleGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 10px rgba(127, 255, 0, 0.8),
+      0 0 20px rgba(127, 255, 0, 0.6),
+      2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(127, 255, 0, 1),
+      0 0 40px rgba(127, 255, 0, 0.8),
+      2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.special-subtitle {
+  font-size: 1.4rem;
+  color: #ffb6c1;
+  font-style: italic;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.special-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.special-section {
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #e0f7ff;
+  animation: fadeIn 1.2s ease-out backwards;
+}
+
+.special-section:last-child {
+  border-bottom: none;
+}
+
+.special-section h2 {
+  color: #0a4d68;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.insect-page .special-section h2 {
+  color: #2d5016;
+}
+
+.special-section p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.special-section strong {
+  color: #0a4d68;
+  font-weight: 700;
+}
+
+.insect-page .special-section strong {
+  color: #2d5016;
+}
+
+/* Seção romântica especial */
+.romantic-section {
+  background: linear-gradient(135deg, #ffe0f0 0%, #ffc0e0 100%);
+  padding: 30px;
+  border-radius: 15px;
+  border: 3px solid #ff69b4;
+  box-shadow: 0 5px 25px rgba(255, 105, 180, 0.3);
+}
+
+.romantic-section h2 {
+  color: #c71585;
+  text-align: center;
+}
+
+.romantic-section p {
+  color: #8b0051;
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .main-heart {
+    width: 150px;
+    height: 150px;
+  }
+
+  .heart-text {
+    font-size: 1rem;
+  }
+
+  .hearts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .heart-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .jellyfish-emoji,
+  .insect-emoji {
+    font-size: 1.5rem;
+  }
+
+  #messageText {
+    font-size: 1.1rem;
+  }
+
+  .message-box {
+    padding: 30px;
+  }
+
+  .special-title {
+    font-size: 2rem;
+  }
+
+  .special-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .special-content {
+    padding: 25px;
+  }
+
+  .special-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .special-section p {
+    font-size: 1rem;
+  }
+
+  .back-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .main-heart {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hearts-grid {
+    gap: 15px;
+  }
+
+  .heart-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .jellyfish-emoji,
+  .insect-emoji {
+    font-size: 1.2rem;
+  }
+
+  #messageText {
+    font-size: 1rem;
+  }
+
+  .message-box {
+    padding: 25px;
+  }
+
+  .special-title {
+    font-size: 1.6rem;
+  }
+
+  .special-subtitle {
+    font-size: 1rem;
+  }
+
+  .special-content {
+    padding: 20px;
+  }
+
+  .special-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .special-section p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Botão Flutuante de Galeria */
+.floating-gallery-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  z-index: 50;
+  animation: floatUpDown 3s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.floating-gallery-btn:hover {
+  transform: scale(1.15);
+}
+
+.gallery-heart-icon {
+  width: 100%;
+  height: 100%;
+  color: #ff69b4;
+  filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.8));
+}
+
+.gallery-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  pointer-events: none;
+}
+
+@keyframes floatUpDown {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Menu de Galerias */
+.gallery-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgba(255, 255, 255, 0.98);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  z-index: 1001;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 3px solid #ff69b4;
+}
+
+.gallery-menu.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.gallery-menu h2 {
+  color: #764ba2;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.close-gallery-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.close-gallery-menu:hover {
+  background: #ff1493;
+  transform: rotate(90deg);
+}
+
+.gallery-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-option-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-option-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-option-icon {
+  font-size: 2rem;
+}
+
+/* =============================================== */
+/* PÁGINAS DE GALERIA */
+/* =============================================== */
+
+.gallery-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.gallery-page.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#jellyfishGalleryPage {
+  background: linear-gradient(135deg, #0a4d68 0%, #05445e 50%, #189ab4 100%);
+}
+
+#insectGalleryPage {
+  background: linear-gradient(135deg, #2d5016 0%, #3d6e1f 50%, #6ba32a 100%);
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.jellyfish-gallery-title {
+  color: #00ffff;
+}
+
+.insect-gallery-title {
+  color: #7fff00;
+}
+
+.gallery-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffb6c1;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item-name {
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Modal de Detalhes */
+.detail-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.detail-modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.detail-modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 30px;
+  animation: scaleIn 0.4s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-detail-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.close-detail-btn:hover {
+  background: #ff1493;
+  transform: rotate(90deg);
+}
+
+.detail-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.detail-title {
+  color: #764ba2;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.detail-text {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.detail-text p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.detail-text strong {
+  color: #764ba2;
+}
+
+/* Responsividade para galerias */
+@media (max-width: 768px) {
+  .floating-gallery-btn {
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .gallery-text {
+    font-size: 1.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .gallery-item-image {
+    height: 150px;
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+  }
+
+  .detail-modal-content {
+    padding: 20px;
+  }
+
+  .detail-title {
+    font-size: 1.5rem;
+  }
+
+  .detail-image {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-gallery-btn {
+    width: 55px;
+    height: 55px;
+  }
+
+  .gallery-text {
+    font-size: 1.3rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+
+  .gallery-item-image {
+    height: 130px;
+  }
+
+  .gallery-item-name {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .gallery-option-btn {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  .gallery-option-icon {
+    font-size: 1.5rem;
+  }
+}
